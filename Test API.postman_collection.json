@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "7bf29976-555c-4b0f-aafb-1324503eb732",
+		"name": "Test API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37991301",
+		"_collection_link": "https://warped-meteor-14399.postman.co/workspace/24a45d78-de23-4d5a-ac0b-6c84563ce809/collection/37991301-7bf29976-555c-4b0f-aafb-1324503eb732?action=share&source=collection_link&creator=37991301"
+	},
+	"item": [
+		{
+			"name": "All Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/posts",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/posts/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"title\": \"My first test post\",\r\n  \"body\": \"This is a test post created during QA assignment using Postman.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/posts",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update new post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"userId\": 1,\r\n  \"title\": \"Updated test post\",\r\n  \"body\": \"This is the updated version of the post for QA assignment.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/posts/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"userId\": 1,\r\n  \"title\": \"Updated test post\",\r\n  \"body\": \"This is the updated version of the post for QA assignment.\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{baseURL}}/posts/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
